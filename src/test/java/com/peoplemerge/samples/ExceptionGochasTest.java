@@ -2,8 +2,10 @@ package com.peoplemerge.samples;
 
 import java.util.logging.Logger;
 
+import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.internal.runners.statements.Fail;
 
 public class ExceptionGochasTest {
 
@@ -28,6 +30,30 @@ public class ExceptionGochasTest {
 		throw new UncheckedException();
 	}
 
+	
+	@Test(expected = UncheckedException.class)
+	public void showUncaughtFinally() {
+		System.out.println();
+		logger.info("******************************************************************************");
+		System.out.println("No catch... finally still runs");
+		try{
+			throw new UncheckedException();
+		}finally{
+			
+		}
+	}
+
+	
+/*	
+	@Test(expected = Exception.class)
+	public void methodThrows(){
+		try{
+			throw new 
+		}
+		Assert.fail();
+		
+	}
+	*/
 	class AlsoUnchecked extends Error {
 	}
 
@@ -136,6 +162,6 @@ public class ExceptionGochasTest {
 		logger.info("**************************************************************************");
 
 		System.out.println("TODO: is there a clean way to get the exception in catch {} as well as finally {}?");
-
+		Assert.fail("Not implemented!");
 	}
 }
