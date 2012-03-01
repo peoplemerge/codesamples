@@ -1,5 +1,5 @@
 Develop an application for describing operations on different types of vehicles. The
-application doesn’t’ have to be fully functioning, but implement the core classes that
+application doesn’t have to be fully functioning, but implement the core classes that
 would be needed for the task. The basic operations should be:
 1. Accelerate (slow, fast, really-fast)
 2. Stop (stopping – slowly, stopping, stopping-fast)
