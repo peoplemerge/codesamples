@@ -1,0 +1,22 @@
+Develop an application for describing operations on different types of vehicles. The
+application doesn’t’ have to be fully functioning, but implement the core classes that
+would be needed for the task. The basic operations should be:
+1. Accelerate (slow, fast, really-fast)
+2. Stop (stopping – slowly, stopping, stopping-fast)
+3. Top speed( mph )
+4. Engine types (diesel, hybrid, rotary, gasoline).
+
+The types of vehicles are:
+1. Semi-truck (diesel, 80 mph)
+2. Ferrari 458(gasoline, 210 mph)
+3. Honda S2000 (gasoline, 141 mph)
+4. Toyota Prius(hybrid,120 mph)
+5. Mazda RX-8 (rotary, 135 mph)
+6. Mazda RX-7 (rotary, 165 mph)
+7. Honda Insight (hybrid, 120mph)
+
+Example:
+
+Calling the Accelerate method for the Ferrari 458 should output “really –fast”
+
+Calling stop for the Semi-truck should output “stopping-slowly”

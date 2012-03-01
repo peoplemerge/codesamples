@@ -1,0 +1,20 @@
+BASIC CHESS KNIGHT TOUR
+
+The Problem
+
+You are to implement a simple program in pure Java (or describe an algorithm) to show all moves
+that the knight will do from a defined start point to a defined end point on an empty chessboard. An
+ordered x1y1 and x2y2 are coordinates specify the start and end points. The coordinates must be
+defined in the classic way represented by the standard “algebraic chess notation” where the columns
+are labeled by the letters a to h from left to right from the white player's point of view, and the rows
+by the numbers 1 to 8, with 1 being closest to the white player, as shown on the following picture:
+
+http://upload.wikimedia.org/wikipedia/commons/5/5b/Chess-board-with-letters_nevit_111.svg
+
+Sample Input
+
+a8 d7
+
+Sample Output
+
+a8 b6 d7
