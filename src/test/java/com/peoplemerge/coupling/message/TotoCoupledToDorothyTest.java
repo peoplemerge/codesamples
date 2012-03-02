@@ -5,11 +5,11 @@ import org.junit.Test;
 public class TotoCoupledToDorothyTest {
 
 	@Test
-	void dorothyTalksToToto() {
+	public void dorothyTalksToToto() {
 		Dorothy dorothy = new Dorothy();
 		Toto toto = new Toto(dorothy);
 		// Toto's job is to listen. If you look now at Toto.listen() you'll see
-		// it calls Dorothy.speak().
+		// it calls Dorothy.speak(). 
 		toto.listen();
 		
 		// If you want to dive further into detailed semantics, note that this
