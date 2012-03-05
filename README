@@ -1,0 +1,35 @@
+
+To output screen caps, you'll need
+
+*  Highlight ( http://www.andre-simon.de/doku/highlight/en/highlight.html )
+*  ImageMagick ()
+
+ Also see http://www.libpng.org/pub/png/pngapcv.html
+ highlight -L --batch-recursive=*.java -O ../target/highlighted -S java
+
+Alter the highlight style
+--- highlight.sty	2012-03-04 15:25:40.000000000 -0500
++++ ../highlight.sty	2012-03-04 15:21:36.000000000 -0500
+@@ -17,10 +17,13 @@
+ \newcommand{\hlkwc}[1]{\textcolor[rgb]{0,0,0}{\bf{#1}}}
+ \newcommand{\hlkwd}[1]{\textcolor[rgb]{0,0,0.51}{#1}}
+ \definecolor{bgcolor}{rgb}{1,1,1}
++\usepackage{geometry}
+ \oddsidemargin -3mm
+-\textwidth 165,2truemm
+ \topmargin 0truept
+ \headheight 0truept
+ \headsep 0truept
+-\textheight 230truemm
++\textheight 98in
++\textwidth 13.5in
++\paperwidth 15in
++\paperheight 100in
++\usepackage{helvet}
+  
+
+Add to each tex:
+\begin{document}\pagestyle{empty}
+
+then you will get a pdf with: 
+pdflatex ExceptionGochasTest.java.tex 
