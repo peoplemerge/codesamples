@@ -6,6 +6,4 @@ public class OzLanguage {
 	
 	public final String LIONS_TIGERS_BEARS = "Lions, and tigers, and bears! Oh, my!\n";
 
-	public final String WICKED_WITCH = "Just try and stay out of my way. Just try! I'll get you, my pretty, and your little dog, too!\n";
-
 }

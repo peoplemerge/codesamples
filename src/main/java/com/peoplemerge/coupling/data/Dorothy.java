@@ -1,9 +1,9 @@
 package com.peoplemerge.coupling.data;
 
-public class Dorothy implements CanSpeak{
+public class Dorothy {
 
 	public String speak() {
-		return "Lions, and tigers, and bears! Oh, my!\n";
+		return "Toto, I have the feeling we're not in Kansas anymore!\n";
 	}
 
 }
