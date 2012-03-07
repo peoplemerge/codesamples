@@ -1,11 +1,10 @@
-package com.peoplemerge.samples;
+package com.peoplemerge.oop.lsp;
 
-import com.peoplemerge.samples.ExceptionGochasTest.OverriddenException;
 
 public class LiskovSubstitutionProblem {
 
 	
-	
+	class OverriddenException extends Exception{}
 	
 	class SuperThrows {
 		public void method() throws OverriddenException{
@@ -16,7 +15,6 @@ public class LiskovSubstitutionProblem {
 	// Java language syntax explicitly prevents postcondition from being weakened  
 	class SubclassViolatesLSP extends SuperThrows{
 		public void method() throws Exception{
-			
 		}
 	}
 
