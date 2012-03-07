@@ -1,4 +1,4 @@
-package com.peoplemerge.oop.lsp;
+package com.peoplemerge.oop.lspsrp;
 
 public class SquareBreaksLspImplicitly extends Rectangle {
 

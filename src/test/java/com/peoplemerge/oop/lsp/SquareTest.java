@@ -5,6 +5,8 @@ import static junit.framework.Assert.fail;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.peoplemerge.oop.lspsrp.Square;
+
 public class SquareTest {
 // source: http://cafe.elharo.com/programming/a-square-is-not-a-rectangle/trackback/
 	@Ignore
