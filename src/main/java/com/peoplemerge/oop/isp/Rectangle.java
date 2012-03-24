@@ -1,6 +1,6 @@
 package com.peoplemerge.oop.isp;
 
-public class Rectangle implements Shape {
+public class Rectangle implements HasLengthWidth {
 	
 	private final double width;
 	private final double height;

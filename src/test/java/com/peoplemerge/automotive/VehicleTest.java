@@ -17,6 +17,7 @@ public class VehicleTest
 	 */
 	@Test
 	public void testFerrariAcceleratesFast(){
+		
 		MovingVehicle ferrari = Automobile.Factory.buildFerrari458();
 		String accelerateOutput = ferrari.accelerate();
 		Assert.assertEquals("really-fast", accelerateOutput);
