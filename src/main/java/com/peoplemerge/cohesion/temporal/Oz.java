@@ -2,14 +2,23 @@ package com.peoplemerge.cohesion.temporal;
 
 public class Oz {
 
+
+	Dorothy dorothy = new Dorothy();
+	YellowBrickRoad yellowBrickRoad = new YellowBrickRoad();
+
+	
 	public Oz(){
-		Dorothy dorothy = new Dorothy();
+		initializeWorld();
+		dorothy.follow(yellowBrickRoad);
+	}
+
+
+	private void initializeWorld() {
 		House dorthysHouse = dorothy.getHouse();
 		Toto toto = new Toto();
 		WickedWitchOfTheEast eastWitch = new WickedWitchOfTheEast();
 		Glinda glinda = new Glinda();
 		Munchkins munchkins = new Munchkins();
-		YellowBrickRoad yellowBrickRoad = new YellowBrickRoad();
 		
 		dorthysHouse.landOn(eastWitch);
 		eastWitch.die();
@@ -37,7 +46,5 @@ public class Oz {
 		westWitch.speakTo(dorothy, "Just try to stay out of my way... Just try!  I'll get you, my pretty, and your little dog, too");
 		glinda.speakTo(dorothy, "That was her sister, the wicked witch of the East.  This is the Wicked Witch of the West");
 		westWitch.leaveByPuffOfSmoke();
-		dorothy.follow(yellowBrickRoad);
-		
 	}
 }
