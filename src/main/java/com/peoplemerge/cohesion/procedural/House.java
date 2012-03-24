@@ -1,4 +1,4 @@
-package com.peoplemerge.cohesion.temporal;
+package com.peoplemerge.cohesion.procedural;
 
 public class House {
 

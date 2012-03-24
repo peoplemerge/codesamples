@@ -2,49 +2,47 @@ package com.peoplemerge.cohesion.temporal;
 
 public class Oz {
 
-
 	Dorothy dorothy = new Dorothy();
-	YellowBrickRoad yellowBrickRoad = new YellowBrickRoad();
+	Glinda glinda = new Glinda();
+	House dorthysHouse = dorothy.getHouse();
+	Munchkins munchkins = new Munchkins();
+	Toto toto = new Toto();
+	Witch eastWitch = new Witch();
 
-	
-	public Oz(){
+	public Oz() {
+		/*
+		 * So when does the world get initialized? At the TIME this object is
+		 * constructed.Temporal cohesion means that all occurrences of all
+		 * elements of processing in a collection occur within the same limited
+		 * time during the execution of a system.
+		 */
 		initializeWorld();
-		dorothy.follow(yellowBrickRoad);
 	}
 
+	/*
+	 * When you performs multiple sequential functions, which are combined in a
+	 * class or method based on the time they're executed such as a constructor,
+	 * destructor, thread wakeup time, you have temporal cohesion.
+	 */
 
 	private void initializeWorld() {
-		House dorthysHouse = dorothy.getHouse();
-		Toto toto = new Toto();
-		WickedWitchOfTheEast eastWitch = new WickedWitchOfTheEast();
-		Glinda glinda = new Glinda();
-		Munchkins munchkins = new Munchkins();
-		
-		dorthysHouse.landOn(eastWitch);
+		/*
+		 * When the Oz object is instantiated, a number of things occur to
+		 * initialize this world: the witch dies, Munchkins tell Glinda (the
+		 * good witch of the North) that Dorothy is here, while Dorothy walks
+		 * around this technicolor world and observes to Toto that they're not
+		 * in Kansas. The important thing to note is that it doesn't matter the
+		 * order that these operations occur since they all really happen either
+		 * simultaneously or all around the same time period, but it's critical
+		 * they all happen upon initialization. The story doesn't begin
+		 */
 		eastWitch.die();
-		
 		dorothy.leave(dorthysHouse);
 		munchkins.notifyTheresANewWitch(glinda).andRequestAssessmentOf(dorothy);
 		dorothy.lookAt(this);
 		munchkins.lookAt(dorothy);
-		dorothy.speakTo(toto, "Toto, I have the feeling we're not in Kansas anymore.");
-		dorothy.speakTo(toto, "We must be over the rainbow.");
-		glinda.arriveByBubble();
-		
-		glinda.speakTo(dorothy, "Are you a good witch or a bad witch?");
-		dorothy.speakTo(glinda, "I'm not a witch at all.");
-		glinda.speakTo(munchkins, "Let the joyous news be spread the wicked old witch at last is dead!");
+		dorothy.speakTo(toto,
+				"Toto, I have the feeling we're not in Kansas anymore.  We must be over the rainbow.");
 
-		WickedWitchOfTheWest westWitch = new WickedWitchOfTheWest();
-		westWitch.arriveInPuffOfSmoke();
-		dorothy.speakTo(glinda, "I though you said she was dead.");
-		glinda.speakTo(dorothy, "That was her sister, the wicked witch of the East.  This is the Wicked Witch of the West");
-		westWitch.speakTo(glinda, "Who killed my sister?");
-		westWitch.speakTo(dorothy, "Who killed the witch of the east? Was it you?");
-		dorothy.speakTo(westWitch, "No, I didn't mean to kill anybody. It was an accident");
-		
-		westWitch.speakTo(dorothy, "Just try to stay out of my way... Just try!  I'll get you, my pretty, and your little dog, too");
-		glinda.speakTo(dorothy, "That was her sister, the wicked witch of the East.  This is the Wicked Witch of the West");
-		westWitch.leaveByPuffOfSmoke();
 	}
 }

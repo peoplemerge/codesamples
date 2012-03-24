@@ -1,5 +1,6 @@
-package com.peoplemerge.cohesion.temporal;
+package com.peoplemerge.cohesion.procedural;
 
+import com.peoplemerge.cohesion.procedural.Glinda;
 
 public class Munchkins extends Character{
 

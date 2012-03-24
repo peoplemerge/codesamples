@@ -1,6 +1,4 @@
-package com.peoplemerge.cohesion.temporal;
-
-import com.peoplemerge.cohesion.procedural.YellowBrickRoad;
+package com.peoplemerge.cohesion.procedural;
 
 public class Dorothy extends Character {
 
@@ -13,7 +11,7 @@ public class Dorothy extends Character {
 		
 	}
 
-	public void lookAt(Oz oz) {
+	public void lookAt(Story oz) {
 		// TODO Auto-generated method stub
 		
 	}
