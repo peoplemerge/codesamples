@@ -2,6 +2,10 @@ package com.peoplemerge.cohesion.sequential;
 
 public class Glinda extends StoryChain {
 
+	public Glinda (StoryChain next){
+		setNext(next);
+	}
+	
 	@Override
 	protected void handle(Dorothy dorothy) {
 		System.out.println();

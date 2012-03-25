@@ -7,6 +7,7 @@ public class Dorothy {
 	public void goOnAdventure() {
 		QuestBean quest = null;
 		quest = questHandler.handle(Operation.ASK_FOR_HELP, "Just listen to what Miss Gulch did to Toto!");
+		
 		quest = questHandler.handle(Operation.GO_TO_OZ_AND_CRUSH_WITCH_OF_EAST, "I don't think we're in Kansas anymore");
 		quest = questHandler.handle(Operation.ASK_WITCH_OF_NORTH_FOR_HELP_BEFORE_WITCH_OF_WEST_THREATENS, "I didn't mean to kill anyone.  It was an accident.");
 		quest = questHandler.handle(Operation.FIND_WIZARD_OF_OZ, "We'll soon find the Wizard.");

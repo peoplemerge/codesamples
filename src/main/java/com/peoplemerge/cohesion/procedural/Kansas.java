@@ -60,7 +60,7 @@ public class Kansas {
 		
 	}
 	
-	public void dorothyAsksLaborersForHelp(){
+	public void dorothyAsksFarmhandsForHelp(){
 		
 	}
 	

@@ -2,9 +2,10 @@ package com.peoplemerge.cohesion.sequential;
 
 public abstract class StoryChain {
 
+	
 	private StoryChain next;
 
-	public void setNext(StoryChain next){
+	protected void setNext(StoryChain next){
 		this.next = next;
 	}
 	

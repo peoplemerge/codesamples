@@ -9,7 +9,7 @@ public class Story {
 		Kansas kansas = new Kansas();
 		kansas.dorothyRunsHome();
 		kansas.dorothyAsksRelativesForHelp();
-		kansas.dorothyAsksLaborersForHelp();
+		kansas.dorothyAsksFarmhandsForHelp();
 		kansas.houseCaughtInTornado();
 		
 		Oz oz = new Oz();

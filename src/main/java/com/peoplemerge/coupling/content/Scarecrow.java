@@ -7,6 +7,7 @@ public enum Scarecrow {
 	
 	public void burn(){
 		isBurning = true;
+		System.out.println("Help! Help!");	
 	}
 	
 	public void getWet(){

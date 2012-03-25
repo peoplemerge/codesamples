@@ -2,6 +2,10 @@ package com.peoplemerge.cohesion.sequential;
 
 public class Hunk extends StoryChain {
 
+	public Hunk (StoryChain next){
+		setNext(next);
+	}
+	
 	@Override
 	protected void handle(Dorothy dorothy) {
 		
