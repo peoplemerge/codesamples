@@ -8,12 +8,13 @@ public class QuestHandler {
 		System.out.println("That accomplishes nothing");
 	}
 
-	public void handle(Operation in, String message) {
+	public QuestBean handle(Operation in, String message) {
 		/*
 		 * This operation features communication cohesion because it handles all
-		 * Operations possible (input communication), returning the result of
-		 * the operation. Also it persists state using with the
-		 * QuestBean.addAccomplishment (output communication).
+		 * Operations possible (input communication). Also it persists state
+		 * using with the QuestBean.addAccomplishment (output communication).
+		 * Notice how hard it is to correlate the message inputted to the output
+		 * of system.out.println.  
 		 */
 		questBean.load();
 		switch (in) {
@@ -56,13 +57,15 @@ public class QuestHandler {
 		case CLICK_HEELS:
 			questBean.addAccomplishment(in, message);
 			questBean.save();
-			System.out.println("If I ever go looking for my heart's desire again, I won't"
-					+ " look any further than my own backyard.  Because if it isn't there,"
-					+ " I never really lost it to begin with!");
+			System.out
+					.println("If I ever go looking for my heart's desire again, I won't"
+							+ " look any further than my own backyard.  Because if it isn't there,"
+							+ " I never really lost it to begin with!");
 			break;
 		default:
 			System.out.println("Operation not supported");
 			break;
 		}
+		return questBean;
 	}
 }
