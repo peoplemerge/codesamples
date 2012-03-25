@@ -1,5 +1,5 @@
 package com.peoplemerge.cohesion.procedural;
 
-public class Hank {
+public class Hunk {
 
 }
