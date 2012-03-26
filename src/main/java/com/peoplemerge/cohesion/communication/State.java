@@ -1,9 +1,10 @@
 package com.peoplemerge.cohesion.communication;
 
-public enum Operation {
+public enum State {
 
-ASK_FOR_HELP,
-GO_TO_OZ_AND_CRUSH_WITCH_OF_EAST,
+ASKED_FOR_HELP,
+GONE_TO_OZ_AND_CRUSHED_WITCH_OF_EAST,
+
 ASK_WITCH_OF_NORTH_FOR_HELP_BEFORE_WITCH_OF_WEST_THREATENS,
 FIND_WIZARD_OF_OZ,
 GET_CAPTURED_BY_WITCH,

@@ -11,8 +11,8 @@ public class Story {
 		Witch witch = new Witch(scarecrow);
 		Glinda glinda = new Glinda(witch);
 		Zeke zeke = new Zeke(glinda);
-		Hunk hunk = new Hunk(zeke);
-		Hickory hickory = new Hickory(hunk);
+		Hickory hickory = new Hickory(zeke);
+		Hunk hunk = new Hunk(hickory);
 		UncleHenry henry = new UncleHenry(hickory);
 		AuntEm em = new AuntEm(henry);
 		chain = em;
