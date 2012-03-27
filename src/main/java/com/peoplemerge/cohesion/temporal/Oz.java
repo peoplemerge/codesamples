@@ -42,7 +42,9 @@ public class Oz {
 		dorothy.lookAt(this);
 		munchkins.lookAt(dorothy);
 		dorothy.speakTo(toto,
-				"Toto, I have the feeling we're not in Kansas anymore.  We must be over the rainbow.");
+				"Toto, I have the feeling we're not in Kansas anymore.  " +
+				"We must be over the rainbow.");
+		
 
 	}
 }

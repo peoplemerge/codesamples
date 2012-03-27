@@ -1,8 +1,7 @@
 package com.peoplemerge.cohesion.communication;
 
-public class QuestHandler {
+public class Quest {
 
-	private QuestBean questBean = new QuestBean();
 
 	private void accomplishNothing() {
 		System.out.println("That accomplishes nothing");
@@ -19,16 +18,17 @@ public class QuestHandler {
 	 * of system.out.println.
 	 */
 
-	public State askForHelp(QuestBean questBean2, String string) {
+	public State askForHelp(QuestBean questBean, String string) {
 		accomplishNothing();
 		System.out
 				.println("Think you didn't have any brains at all.  Why don't you use them?  When you "
 						+ "come home, don't go by Miss Gulch's place.  Then Toto won't get in her garden, and "
 						+ "you won't get in no trouble.  See?");
+		// TODO return current state from Bean
 		return State.ASKED_FOR_HELP;
 	}
 
-	public State goToOz(QuestBean questBean2, String message) {
+	public State goToOz(QuestBean questBean, String message) {
 		questBean.load();
 		State state = State.GONE_TO_OZ_AND_CRUSHED_WITCH_OF_EAST;
 		questBean.addAccomplishment(state, message);

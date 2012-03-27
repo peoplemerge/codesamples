@@ -25,6 +25,6 @@ public class Story {
 	// Story.tell() is where the real action happens
 	public void tell(){
 		Dorothy dorothy = new Dorothy();
-		chain.handle(dorothy);
+		chain.process(dorothy);
 	}
 }

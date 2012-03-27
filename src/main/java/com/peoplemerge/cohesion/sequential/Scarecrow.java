@@ -7,7 +7,7 @@ public class Scarecrow extends StoryChain {
 	}
 	@Override
 	protected void handle(Dorothy dorothy) {
-		dorothy.help("She's wearing the ruby slippers she gave her.");
+		dorothy.help("She's wearing the ruby slippers Glinda gave her.");
 	}
 
 }

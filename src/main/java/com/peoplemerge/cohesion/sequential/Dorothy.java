@@ -8,7 +8,7 @@ public class Dorothy {
 	public void dontHelp(String message) {
 	}
 
-	public void harm(String message) {
+	public void threaten(String message) {
 	}
 
 }
