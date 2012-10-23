@@ -8,17 +8,16 @@ import org.junit.Test;
 public class WeatherGrammarTest {
 
 	String withWx = "\n"
-
 			+ "<pre>\n"
-
+			+ " MMU June 2002"
 			+ "  Dy MxT   MnT   AvT   HDDay  AvDP 1HrP TPcpn WxType PDir AvSp Dir MxS SkyC MxR MnR AvSLP\n"
-
 			+ "  1  88    59    74          53.8       0.00 F       280  9.6 270  17  1.6  93 23 1004.5\n"
-
+			+ "  mo  82.9  60.5  71.7    16  58.8       0.00              6.9          5.3"
 			+ "</pre>\n";
-//  1  88    59    74          53.8       0.00 F       280  9.6 270  17  1.6  93 23 1004.5
-//  2  79    63    71          46.5       0.00         330  8.7 340  23  3.3  70 28 1004.5
-//     9             86          32*         59       6       61.5    0.00          240     7.6     220     12      6.0     78      46      1018.6
+
+	// 1 88 59 74 53.8 0.00 F 280 9.6 270 17 1.6 93 23 1004.5
+	// 2 79 63 71 46.5 0.00 330 8.7 340 23 3.3 70 28 1004.5
+	// 9 86 32* 59 6 61.5 0.00 240 7.6 220 12 6.0 78 46 1018.6
 
 	@Test
 	public void testWithWx() throws Exception {
@@ -32,16 +31,14 @@ public class WeatherGrammarTest {
 		assertEquals(59, single.getMin());
 		assertEquals(29, single.getVariance());
 	}
-	
+
 	String withoutWx = "\n"
-
-		+ "<pre>\n"
-
-		+ "  Dy MxT   MnT   AvT   HDDay  AvDP 1HrP TPcpn WxType PDir AvSp Dir MxS SkyC MxR MnR AvSLP\n"
-
-		+ "  2  79    63    71          46.5       0.00         330  8.7 340  23  3.3  70 28 1004.5\n"
-
-		+ "</pre>\n";
+			+ "<pre>\n"
+			+ " MMU June 2002"
+			+ "  Dy MxT   MnT   AvT   HDDay  AvDP 1HrP TPcpn WxType PDir AvSp Dir MxS SkyC MxR MnR AvSLP\n"
+			+ "  2  79    63    71          46.5       0.00         330  8.7 340  23  3.3  70 28 1004.5\n"
+			+ "  mo  82.9  60.5  71.7    16  58.8       0.00              6.9          5.3"
+			+ "</pre>\n";
 
 	@Test
 	public void testWithoutWx() throws Exception {
@@ -52,16 +49,13 @@ public class WeatherGrammarTest {
 		assertEquals(2, single.getDay());
 	}
 
-	
 	String withAsterix = "\n"
-
-		+ "<pre>\n"
-
-		+ "  Dy MxT   MnT   AvT   HDDay  AvDP 1HrP TPcpn WxType PDir AvSp Dir MxS SkyC MxR MnR AvSLP\n"
-
-		+ "  9  86    32*   59       6  61.5       0.00         240  7.6 220  12  6.0  78 46 1018.6\n"
-
-		+ "</pre>\n";
+			+ "<pre>\n"
+			+ " MMU June 2002"
+			+ "  Dy MxT   MnT   AvT   HDDay  AvDP 1HrP TPcpn WxType PDir AvSp Dir MxS SkyC MxR MnR AvSLP\n"
+			+ "  9  86    32*   59       6  61.5       0.00         240  7.6 220  12  6.0  78 46 1018.6\n"
+			+ "  mo  82.9  60.5  71.7    16  58.8       0.00              6.9          5.3"
+			+ "</pre>\n";
 
 	//    
 

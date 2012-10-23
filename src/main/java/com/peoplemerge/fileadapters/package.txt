@@ -1,0 +1,21 @@
+
+Since what matters to most companies is how well a developer can build a maintainable piece of software as the project grows and becomes more complex, I put a bit more time into doing it properly than I do normally.
+
+To see this project in action, run the following on any GNU unix:
+
+tar -zxvf fileadapters.tar.gz
+cd fileadapters
+mvn clean antlr3:antlr compile test
+
+Begin by reading the tests in src/test/java/com/peoplemerge/fileadapters/
+
+As you may already notice, I use ANTLR to parse the file input.  Grammars are under-appreciated in this world of regexes but I demonstrate how to cleanly use this for parsing which can sometimes be tedious process.  The grammars can be found in src/main/antlr3/com/peoplemerge/fileadapters.  I can explain them in more detail if desired.
+
+The way the second problem was influenced by the first was as follows: 
+
+* Coupling is loose by passing data through HasVariance interface.  
+
+*  As much as possible I avoid procedural logic in favor of OO and implemented this using Iterator and Strategy patterns.  The strategy pattern encapsulated the calculation of the variance, and the iterator was used to find the single entry that fit the desired result.
+
+*  The Open-Closed Principle (OCP) could be followed by implementing the HasVariance interface, (though I admit the VarianceAwareList violates it by using the Factory Method instead of an Abstract Factory).
+

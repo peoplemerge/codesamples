@@ -16,7 +16,7 @@ public class WeatherDataTest {
 
 		VarianceAwareList weatherData = new FileInterpreter().parseWeather();
 		Object diff = weatherData.whoHasLowestVariance();
-		Assert.assertEquals("14", diff);
+		Assert.assertEquals(14, diff);
 
 	}
 }
