@@ -13,8 +13,8 @@ public class SquareTest {
 	public void testSquareApi() {
 		/*
 		 * There are actually several problems here. Thread safety is one, but
-		 * let’s assume the class doesn’t need to be thread-safe. Another is
-		 * that it’s possible to give the sides negative lengths. That we could
+		 * let's assume the class doesn't need to be thread-safe. Another is
+		 * that it's possible to give the sides negative lengths. That we could
 		 * fix with a couple of judiciously thrown IllegalArgumentExceptions.
 		 * However the problem that most troubles me is demonstrated here:
 		 */

@@ -18,7 +18,7 @@ public class SquareBreaksLspImplicitly extends Rectangle {
 	/*
 	 * However, this is really just a louder way of warning the client that the
 	 * Square class does not fulfill the contract of the Rectangle class. It
-	 * doesn’t address the fundamental problem that, in object oriented terms, a
+	 * doesn't address the fundamental problem that, in object oriented terms, a
 	 * square is not a rectangle. The geometric nature of a square is
 	 * incompatible with the object-oriented definition of a rectangle given
 	 * above.

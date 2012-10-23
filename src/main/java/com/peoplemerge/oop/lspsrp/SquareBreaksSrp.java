@@ -41,7 +41,7 @@ public class SquareBreaksSrp extends Rectangle {
 	 * also invoke the setWidth() method or vice versa. The contract of the
 	 * Rectangle class is that you can set the width and the height
 	 * independently, and the Square subclass violates that. Setting width when
-	 * you’re setting height is an unexpected side effect. It violates the
+	 * you're setting height is an unexpected side effect. It violates the
 	 * single responsibility principle.
 	 */
 
